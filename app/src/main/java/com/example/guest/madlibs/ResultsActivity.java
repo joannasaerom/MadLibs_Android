@@ -27,6 +27,7 @@ public class ResultsActivity extends AppCompatActivity {
         String person = intent.getStringExtra("person");
         String action = intent.getStringExtra("action");
         String when = intent.getStringExtra("when");
+        String gender = intent.getStringExtra("gender");
 
         String company = intent.getStringExtra("company");
         String offering = intent.getStringExtra("offering");
@@ -34,10 +35,10 @@ public class ResultsActivity extends AppCompatActivity {
         String problem = intent.getStringExtra("problem");
         String secretWeapon = intent.getStringExtra("secretWeapon");
 
-        if(person == null && action == null && when == null) {
+        if(person == null && action == null && when == null && gender == null) {
             mMadLibText.setText("My company, " + company + " , is developing " + offering + " to help " + audience + " " + problem + " with " + secretWeapon + ".");
         } else{
-            mMadLibText.setText(person + "will " + action + " " + when + ".");
+            mMadLibText.setText(person + ", who is a " + gender + ", will " + action + " " + when + ".");
         }
 
         mTryAgainButton.setOnClickListener(new View.OnClickListener(){

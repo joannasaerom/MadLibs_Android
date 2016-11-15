@@ -52,9 +52,9 @@
         android:layout_height="wrap_content"
         android:text="Generate"
         android:id="@+id/generateButton"
-        android:layout_below="@+id/whenText"
-        android:layout_centerHorizontal="true"
-        android:background="@color/whiteWithOpacity"/>
+        android:background="@color/whiteWithOpacity"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -67,5 +67,30 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/whenText"
+        android:id="@+id/radioGroup"
+        android:layout_centerHorizontal="true">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/radioButton"
+            android:layout_below="@+id/whenText"
+            android:layout_alignEnd="@+id/personText" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/radioButton2"
+            android:layout_below="@+id/radioButton"
+            android:layout_alignStart="@+id/radioButton" />
+    </RadioGroup>
 
 </RelativeLayout>
